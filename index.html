@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Gwambina Group LTD</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/GWAMBINA-LOGO-1-1.png" rel="icon">
+  <link href="assets/img/GWAMBINA-LOGO-1-1.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!-- Bootstrap Icons CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Box Icons CSS -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!-- SwiperJs CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+ <!-- Animate CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+ 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+}
+
+.swiper {
+    width: 100%;
+    height: 100vh; /* Slider yükseklik değeri (vh) cinsinden. */
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100vh; /* Slider yükseklik değeri (vh) cinsinden. */
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 5; 
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-content {
+    align-items: center;
+    position: absolute;
+    width: 50%;
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+@media (max-width: 1044px) {
+    .slider-content {
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+    }
+}
+
+.slider-content h6 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+	text-transform: uppercase; /* Tüm karakerleri büyük harfe çevir */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.slider-content h1 {
+    color: #dc3545;
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0);
+    letter-spacing: 3px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.slider-content p {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    letter-spacing: 3px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.slider-content span {
+	color: #dc3545;
+}
+
+.swiper-pagination-bullet {
+    height: 10px;
+    width: 10px;
+    background: #fff;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    width: 20px;
+    opacity: 1;
+    border-radius: 7px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff; 
+    font-size: 10px !important; 
+    background: rgba(0, 0, 0, 0.3); 
+    border: 0px solid rgba(255, 255, 255, 0.1);
+    border-radius: 35px;
+    padding: 35px 35px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+/* Hover efekti */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: solid rgba(220, 53, 69, 05); 
+    border: 1px solid #ff5733;
+}
+
+
+</style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a style="color: white;"  href="mailto:contact@example.com">
+info@gwambina.co.tz
+</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span style="color: white;">+255 743 484 755</span></i>
+        </div>
+        <div class="languages d-none d-md-flex align-items-center">
+          <ul>
+            <li>En</li>
+            <li><a href="#">De</a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <img src="/gwambina/assets/img/GWAMBINA-LOGO-1-1.png" height="50px">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Home<br></a></li>
+            <li><a href="photo-gallery.html">Photo Gallery</a></li>
+            <li><a href="patner.html">ESG</a></li>
+            <li><a href="amell.html">Amell in Dar</a></li>
+           
+            <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="catering.html">Catering Services</a></li>
+              
+                <li><a href="Bar & Restaurant.html">Bar & Restaurant</a></li>
+                <li><a href="running.html">Running Convenience Stores</a></li>
+                <li><a href="waste.html">Waste Management Services</a></li>
+                  <li><a href="laundry.html">Laundry Services</a></li>
+                    <li><a href="housekeeping.html">HouseKeeping Services</a></li>
+                      <li><a href="gym.html">Gym Services</a></li>
+                        <li><a href="#">Events</a></li>
+              </ul>
+            </li>
+
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+     
+
+
+<!-- Swiper -->
+<div class="swiper mySlider">
+    <div class="swiper-wrapper">
+        <!-- Slide Item -->	
+        <div class="swiper-slide">
+            <div class="overlay"></div>
+            <img src="assets/img/chef.jpg">
+            <div class="slider-content">
+             <h6 class="animate__animated animate__fadeInTopLeft" style="font-size: 45px ;">World-Class Catering Integrated Facilities Management</h6>
+ 
+                
+                
+            </div>
+        </div>
+        <!-- Slide Item -->	
+        <div class="swiper-slide">
+            <div class="overlay"></div>
+            <img src="assets/img/community.jpeg">
+            <div class="slider-content">
+                <h6 class="animate__animated animate__fadeInTopLeft" style="font-size: 35px ;">EXPERT REMOTE SITE
+AND CAMP SOLUTIONS  <span> </span></h6>
+                
+               
+            </div>
+        </div>
+        <!-- Slide Item -->	
+        <div class="swiper-slide">
+            <div class="overlay"></div>
+            <img src="assets/img/chefs/chefs-1.jpg">
+            <div class="slider-content">
+                <h6 class="animate__animated animate__fadeInTopLeft" style="font-size: 35px ;">Delivering End-to-end Industrial Catering, HouseKeeping & Laundry<span> </span></h6>
+                
+               
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="swiper-pagination"></div>
+<div class="slider-pagination">
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+<!-- Swiper END -->
+
+    
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="assets/img/comm2.jpeg" class="img-fluid about-img" alt="" height="100px" width="650px" >
+          </div>
+          <div class="col-lg-6 order-2 order-lg-1 content">
+         <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Gwambina Group LTD</p>
+      </div><!-- End Section Title -->
+            <p class="fst-italic" style="font-size: 23px;">
+              At Gwambina Group LTD, we specialize in transforming operational environments into seamless,
+comfortable, and productive ecosystems. From remote site camp management in challenging
+terrains to luxury urban dining at Amell in Dar, we deliver ISO-compliant, reliable, and tailored
+support services.
+Our commitment to rigorous hygiene standards, local supply chains, and trained personnel makes us
+the preferred contract partner for industrial projects, remote campsites, and corporate facilities
+throughout Tanzania.
+              </p>
+           
+          
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>WHY US</h2>
+        <p>Why Choose Our Services</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <span>01</span>
+              <h4><a href="" class="stretched-link">Quality You Can Trust</a></h4>
+              <p>Professional and experienced catering team.</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <span>02</span>
+              <h4><a href="" class="stretched-link">Convenient One-Stop Destination</a></h4>
+              <p>Enjoy catering, a restaurant & bar, event hosting, gym facilities, and laundry services under one trusted brand.</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <span>03</span>
+              <h4><a href="" class="stretched-link">Customer Satisfaction First</a></h4>
+              <p>We prioritize your experience and strive to exceed your expectations every time.</p>
+            </div>
+          </div><!-- Card Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+
+
+<!-- Core Services Section -->
+<section id="core-services" class="section py-5">
+
+  <div class="container">
+
+    <!-- Section Title -->
+    <div class="section-title text-center mb-5" data-aos="fade-up">
+      <h2>Comprehensive Support Services &amp; Solutions</h2>
+      <p>
+        Tailored turnkey solutions engineered to meet strict health, safety,
+        and operational benchmarks across diverse industries.
+      </p>
+    </div>
+
+    <div class="row gy-4">
+
+      <!-- Service 1 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="service-item p-4 h-100 shadow rounded">
+
+          <i class="bi bi-cup-hot-fill text-warning fs-1 mb-3"></i>
+
+          <h3>Large-Scale Culinary &amp; Catering Solutions</h3>
+
+          <p>
+            We provide balanced international and local meal solutions for
+            high-volume workforces, remote mining camps, oil &amp; gas projects,
+            and corporate institutions. Our operations comply with HACCP and
+            ISO 22000 food safety standards.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item p-4 h-100 shadow rounded">
+
+          <i class="bi bi-building text-warning fs-1 mb-3"></i>
+
+          <h3>Turnkey Camp Management &amp; Accommodation</h3>
+
+          <p>
+            We manage accommodation, resident reception, maintenance,
+            convenience stores, leisure facilities, and daily operations to
+            create comfortable and productive remote living environments.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item p-4 h-100 shadow rounded">
+
+          <i class="bi bi-house-heart-fill text-warning fs-1 mb-3"></i>
+
+          <h3>Commercial Housekeeping &amp; Janitorial Services</h3>
+
+          <p>
+            Professional cleaning and hygiene solutions for offices,
+            industrial facilities, and remote camps using eco-friendly
+            products and standardized sanitation procedures.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="service-item p-4 h-100 shadow rounded">
+
+          <i class="bi bi-droplet-half text-warning fs-1 mb-3"></i>
+
+          <h3>High-Capacity Commercial Laundry</h3>
+
+          <p>
+            Industrial laundry, dry cleaning, PPE sanitization, and textile
+            care services designed for mining operations, hospitality, and
+            large workforce accommodation.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item p-4 h-100 shadow rounded">
+
+          <i class="bi bi-recycle text-warning fs-1 mb-3"></i>
+
+          <h3>Sustainable Waste Management Solutions</h3>
+
+          <p>
+            Safe waste collection, segregation, recycling, transportation,
+            and disposal services that help organizations meet environmental
+            regulations and sustainability objectives.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item p-4 h-100 shadow rounded">
+
+          <i class="bi bi-gear-wide-connected text-warning fs-1 mb-3"></i>
+
+          <h3>Integrated Facilities Management</h3>
+
+          <p>
+            End-to-end facilities management including corporate support,
+            hospitality, leisure, fitness, and lifestyle services such as
+            Amell in Dar, all delivered under one professional standard.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ESG Section -->
+<section id="esg" class="section py-5 bg-light">
+
+  <div class="container">
+
+    <!-- Section Title -->
+    <div class="section-title text-center mb-5" data-aos="fade-up">
+      <h2>Commitment to Environmental, Social &amp; Governance (ESG) Excellence</h2>
+      <p>
+        Sustainable Growth, Community Empowerment &amp; Safety First
+      </p>
+    </div>
+
+    <div class="row align-items-center gy-5">
+
+      <!-- Left Content -->
+      <div class="col-lg-6" data-aos="fade-right">
+
+        <h3 class="mb-4">
+          Building a Sustainable Future Through Responsible Operations
+        </h3>
+
+        <p>
+          Gwambina Group LTD is committed to conducting business responsibly,
+          ethically, and sustainably. Our Environmental, Social, and
+          Governance (ESG) framework guides every aspect of our operations,
+          ensuring we deliver value while protecting the environment,
+          empowering communities, and maintaining the highest standards of
+          corporate governance.
+        </p>
+
+        <p>
+          From responsible resource management to workplace safety and local
+          economic development, we continuously strive to create lasting
+          positive impacts for our clients, employees, and the communities
+          where we operate.
+        </p>
+
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6 text-center" data-aos="fade-left">
+        <img src="assets/img/GWAMBINA-LOGO-1-1.png" width="350px"
+             class="img-fluid rounded-4 shadow-lg"
+             alt="ESG Commitment">
+      </div>
+
+    </div>
+
+    <div class="row gy-4 mt-5">
+
+      <!-- Environmental -->
+      <div class="col-lg-4 col-md-6">
+
+        <div class="card border-0 shadow-sm h-100">
+
+          <div class="card-body text-center">
+
+            <i class="bi bi-tree-fill text-success fs-1 mb-3"></i>
+
+            <h4>Environmental Stewardship</h4>
+
+            <p>
+              We prioritize eco-friendly waste management, energy-efficient
+              equipment, responsible water usage, and sustainable operational
+              practices that help protect local ecosystems and reduce our
+              environmental footprint.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Social -->
+      <div class="col-lg-4 col-md-6">
+
+        <div class="card border-0 shadow-sm h-100">
+
+          <div class="card-body text-center">
+
+            <i class="bi bi-people-fill text-warning fs-1 mb-3"></i>
+
+            <h4>Social Responsibility</h4>
+
+            <p>
+              We invest in local communities by supporting local suppliers,
+              creating employment opportunities, promoting workforce
+              development, and providing continuous training in health,
+              safety, and professional skills.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Governance -->
+      <div class="col-lg-4 col-md-6">
+
+        <div class="card border-0 shadow-sm h-100">
+
+          <div class="card-body text-center">
+
+            <i class="bi bi-shield-check text-primary fs-1 mb-3"></i>
+
+            <h4>Governance &amp; Safety</h4>
+
+            <p>
+              We maintain strict Occupational Health &amp; Safety (OHS),
+              internationally recognized food safety standards, ethical
+              business practices, and transparent governance across every
+              project and client engagement.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<div class="" data-aos="fade-up" style="text-align: center;">
+    <h2 style="font-size: 20px;">Our Satisfaction</h2>
+</div><!-- End Section Title -->
+
+<div class="text-center my-3">
+    <div class="text-warning fs-3">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+    </div>
+    
+</div>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+
+            <div class="col-md-3 col-6 mb-4">
+                <h2 class="counter text-danger" data-target="500">0</h2>
+                <p class="text-uppercase small fw-semibold">Events Served</p>
+            </div>
+
+            <div class="col-md-3 col-6 mb-4">
+                <h2 class="counter text-danger" data-target="10000">0</h2>
+                <p class="text-uppercase small fw-semibold">Happy Guests</p>
+            </div>
+
+            <div class="col-md-3 col-6 mb-4">
+                <h2 class="text-danger">
+                    <span class="counter" data-target="5">0</span>/5
+                </h2>
+                <p class="text-uppercase small fw-semibold">Average Rating</p>
+            </div>
+
+            <div class="col-md-3 col-6 mb-4">
+                <h2 class="counter text-danger" data-target="100">0</h2>
+                <p class="text-uppercase small fw-semibold">Fresh Ingredients</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+    <style>
+.gallery-img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+</style>
+
+
+
+<div class="container my-5">
+  <div class="container section-title" data-aos="fade-up">
+        <h2>Enjoy our best moments</h2>
+      
+      </div><!-- End Section Title -->
+    <div class="row g-3">
+        <div class="col-md-3"><img src="assets/img/3Q2A8656-scaled.jpg" class="gallery-img"></div>
+        <div class="col-md-3"><img src="assets/img/community.jpeg" class="gallery-img"></div>
+        <div class="col-md-3"><img src="assets/img/comm2.jpeg" class="gallery-img"></div>
+        <div class="col-md-3"><img src="assets/img/gwambina-food-5.jpg" class="gallery-img"></div>
+    </div>
+</div>
+
+  
+   
+   
+
+  </main>
+
+
+
+
+<!-- Call To Action Section -->
+<section id="cta" class="section py-5">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <!-- Left Side -->
+      <div class="col-lg-7" data-aos="fade-right">
+
+        <h2 class="fw-bold mb-4">
+          Ready to Elevate Your Operational &amp; Facility Management Standards?
+        </h2>
+
+        <p class="lead mb-4">
+          Partner with Tanzania's leading support services provider. Our
+          experienced team delivers integrated solutions tailored for corporate
+          offices, industrial operations, hospitality venues, mining camps,
+          and remote project sites.
+        </p>
+
+        <p class="mb-4">
+          Whether you require catering, facilities management, housekeeping,
+          laundry, waste management, or complete camp management services,
+          Gwambina Group LTD is committed to delivering reliable, efficient,
+          and sustainable solutions that exceed expectations.
+        </p>
+ 
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
+
+        <div class="card border-0 shadow-lg">
+
+          <div class="card-body p-5">
+
+            <h3 class="mb-4">
+              Contact Information
+            </h3>
+
+            <div class="d-flex mb-4">
+              <i class="bi bi-geo-alt-fill text-warning fs-3 me-3"></i>
+              <div>
+                <h5 class="mb-1">Head Office</h5>
+                <p class="mb-0">
+                  3rd Floor, PSSSF Commercial Complex,<br>
+                  Sam Nujoma Road,<br>
+                  Dar es Salaam, Tanzania
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-4">
+              <i class="bi bi-telephone-fill text-warning fs-3 me-3"></i>
+              <div>
+                <h5 class="mb-1">Direct Phone</h5>
+                <p class="mb-0">
+                  <a href="tel:+255743484755">+255 743 484 755</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-4">
+              <i class="bi bi-envelope-fill text-warning fs-3 me-3"></i>
+              <div>
+                <h5 class="mb-1">Email</h5>
+                <p class="mb-0">
+                  <a href="mailto:info@gwambina.co.tz">
+                    info@gwambina.co.tz
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <i class="bi bi-globe2 text-warning fs-3 me-3"></i>
+              <div>
+                <h5 class="mb-1">Website</h5>
+                <p class="mb-0">
+                  <a href="https://www.gwambina.co.tz" target="_blank">
+                    www.gwambina.co.tz
+                  </a>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">We serve the best</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Location</p>
+            <p>Building 3th Floor, Car Parking Lot, Sam Nujoma Road PSSSF Tower, Dar es Salaam 41000, Tanzania</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+255 743 484 755</span></p>
+            <p><strong>Email:</strong> <span>info@gwambina.co.tz</span></p>
+          </div>
+         <div class="social-links d-flex gap-3">
+    <a href="https://web.facebook.com/GwambinaLoungeltd/?_rdc=1&_rdr#" target="_blank">
+        <i class="bi bi-facebook"></i>
+    </a>
+
+    <a href="https://www.instagram.com/gwambina_catering/" target="_blank">
+        <i class="bi bi-instagram"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/@gwambinagrouplimited?lang=en" target="_blank">
+        <i class="bi bi-tiktok"></i>
+    </a>
+
+     
+</div>
+        </div>
+
+        
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="catering.html">Catering Services</a></li>
+            <li><a href="Bar & Restaurant.html">Bar & Restaurant</a></li>
+            <li><a href="running.html">Running Convenience Stores</a></li>
+            <li><a href="waste.html">Waste Management Services</a></li>
+            <li><a href="laundry.html">Laundry Services</a></li>
+              <li><a href="housekeeping.html">HouseKeeping Services</a></li>
+                      <li><a href="gym.html">Gym Services</a></li>
+                        <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+
+
+        
+       <div class="col-lg-2 col-md-3 footer-links">
+  <h4>Stay Updated</h4>
+  <ul>
+    <li><a href="events.html">Upcoming Events</a></li>
+    <li><a href="career.html">Career</a></li>
+  </ul>
+</div>
+       
+
+      </div>
+    </div>
+
+    
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+  <script>
+const counters = document.querySelectorAll('.counter');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseFloat(counter.getAttribute('data-target'));
+            const decimals = target.toString().includes('.') ? 1 : 0;
+            let current = 0;
+            const increment = target / 100;
+
+            const updateCounter = () => {
+                current += increment;
+
+                if (current < target) {
+                    counter.innerText = current.toFixed(decimals);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    if (target >= 1000) {
+                        counter.innerText = (target / 1000) + "k+";
+                    } else if (target === 500) {
+                        counter.innerText = "500+";
+                    } else if (target === 100) {
+                        counter.innerText = "100%";
+                    } else {
+                        counter.innerText = target.toFixed(decimals);
+                    }
+                }
+            };
+
+            updateCounter();
+            observer.unobserve(counter);
+        }
+    });
+}, { threshold: 0.5 });
+
+counters.forEach(counter => observer.observe(counter));
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Box Icons JS -->
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<!-- SwiperJs JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Custom CSS for SwiperJS -->
+<script>
+    const swiper = new Swiper('.swiper', {
+    // Genel ayarlar    
+    direction: 'horizontal', // Dikey kaydırıcı için 'vertical'
+    loop: true, // Sonsuz döngü
+      autoplay: {
+        delay: 1500, // Resimler arası geçiş süresi (ms)
+        disableOnInteraction: false,
+    },
+
+    // Sayfalama
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true, // Sayfalama noktalarına tıklanabilirlik
+    },
+
+    // Navigasyon düğmeleri
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },  
+
+    // Geçiş efektleri
+    effect: 'fade', // Diğer efektler: slide, fade, cube, coverflow, flip
+        fadeEffect: {
+        crossFade: true,
+    },
+
+    // Geçiş efekti hızı (ms) 
+    speed: 1500,
+    });
+</script>
+
+</body>
+
+</html>
