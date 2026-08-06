@@ -1964,3 +1964,12 @@ a:visited {
 
 
 
+
+
+#header .branding{
+    padding:8px 0;
+}
+
+#header .topbar{
+    padding:4px 0;
+}
