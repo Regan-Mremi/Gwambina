@@ -1961,3 +1961,20 @@ a:visited {
     text-decoration: none !important;
 }
 
+
+
+
+.mySlider{
+    height:calc(100vh - 110px);
+}
+
+.swiper-slide{
+    height:calc(100vh - 110px);
+}
+
+.swiper-slide img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    object-position:center;
+}
