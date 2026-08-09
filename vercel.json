@@ -1,0 +1,39 @@
+{
+  "redirects": [
+    {
+      "source": "/amell-in-dar",
+      "destination": "/amell.html",
+      "permanent": true
+    },
+    {
+      "source": "/catering-services",
+      "destination": "/catering.html",
+      "permanent": true
+    },
+    {
+      "source": "/catering-services/",
+      "destination": "/catering.html",
+      "permanent": true
+    },
+    {
+      "source": "/about-gwambina-group",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about-gwambina-group/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/Bar%20%26%20Restaurant.html",
+      "destination": "/amell.html",
+      "permanent": true
+    },
+    {
+      "source": "/Bar & Restaurant.html",
+      "destination": "/amell.html",
+      "permanent": true
+    }
+  ]
+}
