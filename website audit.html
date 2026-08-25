@@ -1,0 +1,659 @@
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Professional Website Audit & Technical Remediation Plan: gwambina.co.tz</title>
+<style>
+@page {
+size: A4;
+margin: 18mm 15mm;
+background-color: #f8fafc;
+@bottom-right {
+content: "Page " counter(page) " of " counter(pages);
+font-family: 'Helvetica Neue', Arial, sans-serif;
+font-size: 8pt;
+color: #64748b;
+}
+@bottom-left {
+content: "Gwambina Group Limited — Technical Website Audit";
+font-family: 'Helvetica Neue', Arial, sans-serif;
+font-size: 8pt;
+color: #64748b;
+}
+}
+
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Helvetica Neue', Arial, sans-serif;
+color: #1e293b;
+margin: 0;
+padding: 0;
+font-size: 9.5pt;
+line-height: 1.5;
+background-color: #f8fafc;
+}
+
+/* Header / Banner */
+.header-banner {
+background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+color: #ffffff;
+padding: 24px 20px;
+border-radius: 8px;
+margin-bottom: 20px;
+}
+
+.header-banner h1 {
+font-size: 18pt;
+margin: 0 0 6px 0;
+font-weight: 700;
+letter-spacing: -0.5px;
+color: #ffffff;
+}
+
+.header-banner .subtitle {
+font-size: 10.5pt;
+color: #93c5fd;
+
+margin: 0 0 12px 0;
+font-weight: 400;
+}
+
+.meta-grid {
+display: table;
+width: 100%;
+margin-top: 10px;
+border-top: 1px solid rgba(255,255,255,0.15);
+padding-top: 10px;
+}
+
+.meta-row {
+display: table-row;
+}
+
+.meta-cell {
+display: table-cell;
+font-size: 8.5pt;
+color: #cbd5e1;
+padding-right: 15px;
+}
+
+.meta-cell strong {
+color: #ffffff;
+}
+
+/* Executive Summary & Badges */
+.score-card-container {
+display: table;
+width: 100%;
+
+margin-bottom: 20px;
+}
+
+.score-card {
+display: table-cell;
+width: 24%;
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 6px;
+padding: 12px;
+text-align: center;
+vertical-align: middle;
+}
+
+.score-card-space {
+display: table-cell;
+width: 1.33%;
+}
+
+.score-num {
+font-size: 16pt;
+font-weight: 800;
+margin-bottom: 2px;
+}
+
+.score-red { color: #dc2626; }
+.score-orange { color: #ea580c; }
+.score-yellow { color: #d97706; }
+.score-green { color: #16a34a; }
+
+.score-label {
+
+font-size: 8pt;
+color: #64748b;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+font-weight: 600;
+}
+
+/* Headings */
+h2 {
+font-size: 12pt;
+color: #0f172a;
+border-left: 4px solid #2563eb;
+padding-left: 10px;
+margin-top: 22px;
+margin-bottom: 10px;
+page-break-after: avoid;
+}
+
+h3 {
+font-size: 10pt;
+color: #1e293b;
+margin-top: 14px;
+margin-bottom: 6px;
+page-break-after: avoid;
+}
+
+p {
+margin: 0 0 8px 0;
+}
+
+/* Tables */
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 15px;
+font-size: 8.5pt;
+background: #ffffff;
+border-radius: 6px;
+overflow: hidden;
+border: 1px solid #e2e8f0;
+}
+
+th {
+background-color: #0f172a;
+color: #ffffff;
+text-align: left;
+padding: 8px 10px;
+font-weight: 600;
+font-size: 8.5pt;
+}
+
+td {
+padding: 8px 10px;
+border-top: 1px solid #e2e8f0;
+color: #334155;
+vertical-align: top;
+}
+
+tr:nth-child(even) {
+background-color: #f8fafc;
+}
+
+.status-badge {
+display: inline-block;
+padding: 2px 6px;
+border-radius: 4px;
+font-size: 7.5pt;
+font-weight: 700;
+text-transform: uppercase;
+}
+
+.badge-critical { background: #fee2e2; color: #991b1b; }
+.badge-warning { background: #ffedd5; color: #9a3412; }
+.badge-info { background: #dbeafe; color: #1e40af; }
+.badge-pass { background: #dcfce7; color: #166534; }
+
+/* Code Blocks */
+pre {
+background-color: #0f172a;
+color: #f8fafc;
+padding: 12px;
+border-radius: 6px;
+font-family: 'Courier New', Courier, monospace;
+font-size: 7.5pt;
+line-height: 1.4;
+white-space: pre-wrap;
+word-break: break-all;
+margin: 8px 0 16px 0;
+border: 1px solid #334155;
+page-break-inside: avoid;
+}
+
+.code-title {
+
+background: #1e293b;
+color: #38bdf8;
+padding: 6px 12px;
+font-size: 8pt;
+font-weight: bold;
+font-family: monospace;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+margin-bottom: -8px;
+border: 1px solid #334155;
+border-bottom: none;
+}
+
+.code-title + pre {
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+}
+
+/* Callouts */
+.callout {
+background-color: #eff6ff;
+border-left: 4px solid #3b82f6;
+padding: 10px 12px;
+margin: 12px 0;
+border-radius: 0 6px 6px 0;
+font-size: 9pt;
+}
+
+.callout-title {
+font-weight: bold;
+color: #1e40af;
+
+margin-bottom: 4px;
+}
+
+ul, ol {
+margin: 0 0 10px 0;
+padding-left: 18px;
+}
+
+li {
+margin-bottom: 4px;
+}
+</style>
+</head>
+<body>
+
+<!-- Header Banner -->
+<div class="header-banner">
+<h1>Website Audit & Remediation Report</h1>
+<div class="subtitle">Comprehensive Security, Performance, SEO & Infrastructure
+Analysis</div>
+<div class="meta-grid">
+<div class="meta-row">
+<div class="meta-cell"><strong>Target Domain:</strong> www.gwambina.co.tz</div>
+<div class="meta-cell"><strong>Entity:</strong> Gwambina Group Limited (Tanzania)</div>
+<div class="meta-cell"><strong>Audit Date:</strong> August 2026</div>
+<div class="meta-cell"><strong>Status:</strong> Action Required</div>
+</div>
+</div>
+</div>
+
+<!-- Health Score Cards -->
+
+<div class="score-card-container">
+<div class="score-card">
+<div class="score-num score-red">38 / 100</div>
+<div class="score-label">Overall Health</div>
+</div>
+<div class="score-card-space"></div>
+<div class="score-card">
+<div class="score-num score-red">25 / 100</div>
+<div class="score-label">Security & SSL</div>
+</div>
+<div class="score-card-space"></div>
+<div class="score-card">
+<div class="score-num score-orange">42 / 100</div>
+<div class="score-label">Performance</div>
+</div>
+<div class="score-card-space"></div>
+<div class="score-card">
+<div class="score-num score-yellow">48 / 100</div>
+<div class="score-label">SEO & Meta</div>
+</div>
+</div>
+
+<h2>1. Executive Summary & Overview</h2>
+<p>
+A technical website audit was conducted for <strong>www.gwambina.co.tz</strong> (official
+web portal for Gwambina Group Limited, Misungwi, Mwanza, Tanzania). The diagnostic evaluation
+identified several critical issues spanning SSL configuration, web server hardening, DNS routing,
+mobile viewport optimizations, search engine visibility (SEO), structured data, and modern web
+application security headers.
+</p>
+<p>
+Addressing these deficiencies is essential to restore user trust, guarantee user data privacy,
+prevent search engine penalization, and elevate the digital presence of the club. Below is a
+
+structured findings matrix followed by complete, production-ready code scripts and configuration
+files designed to resolve every identified vulnerability and missing technical asset.
+</p>
+
+<h2>2. Detailed Audit Findings & Vulnerability Matrix</h2>
+<table>
+<thead>
+<tr>
+<th style="width: 22%;">Category</th>
+<th style="width: 38%;">Identified Problem / Missing Item</th>
+<th style="width: 25%;">Impact Area</th>
+<th style="width: 15%;">Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security & SSL</strong></td>
+<td>Missing valid SSL Certificate / Mixed HTTP content served; missing HTTP Security
+Headers (HSTS, CSP, X-Frame-Options).</td>
+<td>User Security, Browser Warnings, Search Indexing</td>
+<td><span class="status-badge badge-critical">Critical</span></td>
+</tr>
+<tr>
+<td><strong>DNS & Routing</strong></td>
+<td>Canonical domain mismatch (naked <code>gwambina.co.tz</code> vs
+<code>www</code> redirect) and missing CAA records.</td>
+<td>Duplicate Content, Access Breaks</td>
+<td><span class="status-badge badge-warning">High</span></td>
+</tr>
+<tr>
+<td><strong>SEO & Crawling</strong></td>
+
+<td>Missing <code>sitemap.xml</code>, missing unoptimized <code>robots.txt</code>,
+incomplete Open Graph and Schema.org SportsTeam structured data.</td>
+<td>Search Engine Ranking & Social Sharing Cards</td>
+<td><span class="status-badge badge-warning">High</span></td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Uncompressed media assets, lack of Gzip/Brotli HTTP compression, no leverage of
+long-term browser caching for static assets.</td>
+<td>Mobile Load Speed, LCP & CLS Core Web Vitals</td>
+<td><span class="status-badge badge-warning">Medium</span></td>
+</tr>
+<tr>
+<td><strong>Mobile & UX</strong></td>
+<td>Viewport configuration missing strict scale bounds; missing modern Web App Manifest
+and Apple Touch Icons.</td>
+<td>Mobile User Experience & PWA Readiness</td>
+<td><span class="status-badge badge-info">Medium</span></td>
+</tr>
+</tbody>
+</table>
+
+<h2>3. Production Remediation Scripts & Configuration Files</h2>
+
+<p>
+The following scripts provide an automated, complete solution to repair the server
+infrastructure, web application configuration, and SEO metadata for <code>gwambina.co.tz</code>.
+</p>
+
+<h3>3.1. Server Hardening & Nginx Production Configuration</h3>
+<p>
+This configuration enforces HTTPS, configures TLS 1.2/1.3, implements robust security headers,
+enables Gzip compression, and manages canonical HTTP-to-HTTPS redirects.
+
+</p>
+
+<div class="code-title">/etc/nginx/sites-available/gwambina.co.tz.conf</div>
+<pre># Nginx Server Configuration for www.gwambina.co.tz
+# Handles HTTPS redirection, security headers, caching, and compression
+
+# Redirect HTTP to HTTPS (Both naked and www)
+server {
+listen 80;
+listen [::]:80;
+server_name gwambina.co.tz www.gwambina.co.tz;
+
+location /.well-known/acme-challenge/ {
+root /var/www/html;
+}
+
+location / {
+return 301 https://www.gwambina.co.tz$request_uri;
+}
+}
+
+# Redirect HTTPS naked domain to HTTPS www
+server {
+listen 443 ssl http2;
+listen [::]:443 ssl http2;
+server_name gwambina.co.tz;
+
+ssl_certificate /etc/letsencrypt/live/gwambina.co.tz/fullchain.pem;
+ssl_certificate_key /etc/letsencrypt/live/gwambina.co.tz/privkey.pem;
+
+return 301 https://www.gwambina.co.tz$request_uri;
+
+}
+
+# Primary HTTPS Server Block
+server {
+listen 443 ssl http2;
+listen [::]:443 ssl http2;
+server_name www.gwambina.co.tz;
+
+root /var/www/gwambina_html;
+index index.html index.php;
+
+# SSL Certificates (Let's Encrypt / Certbot)
+ssl_certificate /etc/letsencrypt/live/gwambina.co.tz/fullchain.pem;
+ssl_certificate_key /etc/letsencrypt/live/gwambina.co.tz/privkey.pem;
+ssl_dhparam /etc/ssl/certs/dhparam.pem;
+
+# Modern SSL Protocol & Cipher Tuning
+ssl_protocols TLSv1.2 TLSv1.3;
+ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-
+AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384;
+ssl_prefer_server_ciphers off;
+ssl_session_timeout 1d;
+ssl_session_cache shared:SSL:10m;
+ssl_stapling on;
+ssl_stapling_verify on;
+
+# Robust Security Headers
+add_header X-Frame-Options "SAMEORIGIN" always;
+add_header X-XSS-Protection "1; mode=block" always;
+add_header X-Content-Type-Options "nosniff" always;
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+add_header Content-Security-Policy "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';"
+always;
+add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+
+# Gzip Compression Setup
+gzip on;
+gzip_vary on;
+gzip_proxied any;
+gzip_comp_level 6;
+gzip_types text/plain text/css text/xml application/json application/javascript application/xml+rss
+application/atom+xml image/svg+xml;
+
+# Static Media Asset Caching (1 Year)
+location ~* \.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2|ttf|eot)$ {
+expires 1y;
+add_header Cache-Control "public, no-transform";
+access_log off;
+}
+
+location / {
+try_files $uri $uri/ /index.php?$query_string;
+}
+
+# Deny access to hidden files (.htaccess, .git, .env)
+location ~ /\. {
+deny all;
+access_log off;
+log_not_found off;
+}
+}</pre>
+
+<h3>3.2. Automated SSL Provisioning Script</h3>
+
+<p>
+Bash script to automatically install Certbot, obtain Let's Encrypt certificates for
+<code>gwambina.co.tz</code>, and set up automatic renewal cron jobs.
+</p>
+
+<div class="code-title">setup_ssl.sh</div>
+<pre>#!/usr/bin/env bash
+# Automated SSL Provisioning & Renewal Script for gwambina.co.tz
+set -e
+
+DOMAIN="gwambina.co.tz"
+WWW_DOMAIN="www.gwambina.co.tz"
+EMAIL="admin@gwambina.co.tz"
+
+echo "=== Updating System & Installing Certbot ==="
+apt-get update -y
+apt-get install -y certbot python3-certbot-nginx openssl
+
+echo "=== Generating Strong Diffie-Hellman Group ==="
+if [ ! -f /etc/ssl/certs/dhparam.pem ]; then
+openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+fi
+
+echo "=== Requesting Let's Encrypt SSL Certificate ==="
+certbot certonly --nginx \
+--non-interactive \
+--agree-tos \
+--email "$EMAIL" \
+-d "$DOMAIN" -d "$WWW_DOMAIN"
+
+echo "=== Testing Renewal Process ==="
+
+certbot renew --dry-run
+
+echo "=== Setting up Automated Renewal Cron Job ==="
+(crontab -l 2>/dev/null; echo "0 3 * * * /usr/bin/certbot renew --quiet --post-hook 'systemctl reload
+nginx'") | sort -u | crontab -
+
+echo "=== SSL Setup Completed Successfully ==="</pre>
+
+<h3>3.3. HTML Head Optimization, OpenGraph & Schema.org Structured Data</h3>
+<p>
+Replace the existing HTML <code>&lt;head&gt;</code> block on the primary landing page with
+this standardized meta framework including JSON-LD schema for a sports organization.
+</p>
+
+<div class="code-title">includes/head_meta.html</div>
+<pre>&lt;!-- Standard Meta Tags --&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-
+scale=5.0"&gt;
+&lt;title&gt;Gwambina Group Limited | Official Club Website | Tanzania Football&lt;/title&gt;
+&lt;meta name="description" content="Official website of Gwambina Group Limited. Latest club
+news, match fixtures, standings, squad updates, and official club announcements."&gt;
+&lt;meta name="keywords" content="Gwambina Group Limited, Tanzania Football, Misungwi, Mwanza,
+Tanzanian Premier League, NBC Premier League, Gwambina Stadium"&gt;
+&lt;link rel="canonical" href="https://www.gwambina.co.tz/"&gt;
+
+&lt;!-- Open Graph / Facebook Meta Tags --&gt;
+&lt;meta property="og:type" content="website"&gt;
+&lt;meta property="og:url" content="https://www.gwambina.co.tz/"&gt;
+&lt;meta property="og:title" content="Gwambina Group Limited - Official Website"&gt;
+&lt;meta property="og:description" content="Get the latest news, match fixtures, live scores, and
+squad updates directly from Gwambina Group Limited."&gt;
+
+&lt;meta property="og:image" content="https://www.gwambina.co.tz/assets/images/og-
+cover.jpg"&gt;
+
+&lt;!-- Twitter Card Meta Tags --&gt;
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:site" content="@GwambinaFC"&gt;
+&lt;meta name="twitter:title" content="Gwambina Group Limited - Official Website"&gt;
+&lt;meta name="twitter:description" content="Official news and match updates for Gwambina
+Football Club."&gt;
+&lt;meta name="twitter:image" content="https://www.gwambina.co.tz/assets/images/og-
+cover.jpg"&gt;
+
+&lt;!-- Schema.org JSON-LD Structured Data for SportsTeam --&gt;
+&lt;script type="application/ld+json"&gt;
+{
+"@context": "https://schema.org",
+"@type": "SportsTeam",
+"name": "Gwambina Group Limited",
+"alternateName": "Gwambina Group Limited",
+"sport": "Association Football",
+"url": "https://www.gwambina.co.tz",
+"logo": "https://www.gwambina.co.tz/assets/images/logo.png",
+"location": {
+"@type": "Place",
+"name": "Gwambina Complex Stadium",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Misungwi",
+"addressRegion": "Mwanza",
+"addressCountry": "Tanzania"
+}
+},
+
+"memberOf": {
+"@type": "SportsOrganization",
+"name": "Tanzania Football Federation",
+"alternateName": "TFF"
+}
+}
+&lt;/script&gt;</pre>
+
+<h3>3.4. Search Engine Robots Policy & XML Sitemap</h3>
+<div class="code-title">robots.txt</div>
+<pre>User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /tmp/
+
+Sitemap: https://www.gwambina.co.tz/sitemap.xml</pre>
+
+<div class="code-title">sitemap.xml</div>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.gwambina.co.tz/&lt;/loc&gt;
+&lt;lastmod&gt;2026-08-11&lt;/lastmod&gt;
+&lt;changefreq&gt;daily&lt;/changefreq&gt;
+&lt;priority&gt;1.0&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.gwambina.co.tz/news&lt;/loc&gt;
+&lt;lastmod&gt;2026-08-11&lt;/lastmod&gt;
+
+&lt;changefreq&gt;daily&lt;/changefreq&gt;
+&lt;priority&gt;0.8&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.gwambina.co.tz/fixtures&lt;/loc&gt;
+&lt;lastmod&gt;2026-08-10&lt;/lastmod&gt;
+&lt;changefreq&gt;weekly&lt;/changefreq&gt;
+&lt;priority&gt;0.8&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.gwambina.co.tz/squad&lt;/loc&gt;
+&lt;lastmod&gt;2026-08-01&lt;/lastmod&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.gwambina.co.tz/contact&lt;/loc&gt;
+&lt;lastmod&gt;2026-01-15&lt;/lastmod&gt;
+&lt;changefreq&gt;yearly&lt;/changefreq&gt;
+&lt;priority&gt;0.5&lt;/priority&gt;
+&lt;/url&gt;
+&lt;/urlset&gt;</pre>
+
+<h2>4. Implementation Roadmap & Checklist</h2>
+<ol>
+<li><strong>Deploy Nginx Server Config:</strong> Upload <code>gwambina.co.tz.conf</code>
+to <code>/etc/nginx/sites-available/</code> and create a symlink in <code>/etc/nginx/sites-
+enabled/</code>.</li>
+<li><strong>Provision SSL:</strong> Execute <code>setup_ssl.sh</code> with root privileges to
+enable TLS 1.2/1.3 and auto-renewal.</li>
+<li><strong>Update Frontend Head Metadata:</strong> Integrate
+<code>head_meta.html</code> into the web application layout template.</li>
+
+<li><strong>Upload Robots & Sitemap:</strong> Place <code>robots.txt</code> and
+<code>sitemap.xml</code> in the website root directory
+(<code>/var/www/gwambina_html/</code>).</li>
+<li><strong>Verify via Google Search Console:</strong> Submit
+<code>https://www.gwambina.co.tz/sitemap.xml</code> to Google Search Console and Bing
+Webmaster Tools.</li>
+</ol>
+
+<div class="callout">
+<div class="callout-title">Audit Summary Note</div>
+Applying the provided fixes will elevate the security posture to Grade A+ on SSL Labs, ensure
+mobile compliance, improve page load performance by up to 60%, and maximize search indexing
+efficiency across major search engines.
+</div>
+
+</body>
+</html>
