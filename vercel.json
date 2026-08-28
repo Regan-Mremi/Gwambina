@@ -34,6 +34,36 @@
       "source": "/Bar & Restaurant.html",
       "destination": "/amell.html",
       "permanent": true
+    },
+    {
+      "source": "/housekeeping-services",
+      "destination": "/housekeeping.html",
+      "permanent": true
+    },
+    {
+      "source": "/housekeeping-services/",
+      "destination": "/housekeeping.html",
+      "permanent": true
+    },
+    {
+      "source": "/waste-management-services",
+      "destination": "/waste.html",
+      "permanent": true
+    },
+    {
+      "source": "/waste-management-services/",
+      "destination": "/waste.html",
+      "permanent": true
+    },
+    {
+      "source": "/running-convenience-stores",
+      "destination": "/convenience-store.html",
+      "permanent": true
+    },
+    {
+      "source": "/running-convenience-stores/",
+      "destination": "/convenience-store.html",
+      "permanent": true
     }
   ]
 }
