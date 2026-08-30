@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Disallow: /*?*
 
 Sitemap: https://www.gwambina.co.tz/sitemap.xml
