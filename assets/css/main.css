@@ -1994,3 +1994,91 @@ a:visited {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+
+
+
+
+/* ========================================
+   WHITE NAVBAR WITH SHADOW - GWAMBINA
+======================================== */
+
+.header .branding {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  border-bottom: none !important;
+}
+
+/* Stronger shadow when scrolled */
+.header.scrolled .branding {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+}
+
+/* Logo size */
+.header .logo img {
+  height: 48px !important;
+  max-height: 48px !important;
+}
+
+/* Desktop Navigation Links */
+@media (min-width: 1200px) {
+  .navmenu a,
+  .navmenu a:focus {
+    color: #222222 !important;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .navmenu li:hover > a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: #dc3545 !important;
+  }
+
+  /* Dropdown */
+  .navmenu .dropdown ul {
+    background: #ffffff !important;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 8px 0;
+  }
+
+  .navmenu .dropdown ul a {
+    color: #333333 !important;
+  }
+
+  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover > a {
+    color: #dc3545 !important;
+    background-color: #f8f9fa;
+  }
+}
+
+/* Mobile Toggle Icon */
+.mobile-nav-toggle {
+  color: #222222 !important;
+}
+
+/* Mobile Menu Background (optional improvement) */
+@media (max-width: 1199px) {
+  .navmenu ul {
+    background-color: #ffffff !important;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: #222222 !important;
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: #dc3545 !important;
+  }
+}

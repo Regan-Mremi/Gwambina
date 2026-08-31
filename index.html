@@ -7,7 +7,7 @@
   
   <title>Gwambina Group | Corporate Catering, Camp & Facilities Management Tanzania</title>
   <meta name="description" content="Gwambina Group provides ISO-compliant corporate catering, remote camp management, housekeeping, and commercial laundry services in Tanzania. Request a quote.">
-  <meta name="keywords" content="catering Tanzania, camp management Tanzania, facilities management, industrial catering, remote site catering, housekeeping Tanzania">
+  <meta name="keywords" content="catering Tanzania, camp management Tanzania, facilities management, industrial catering, remote site catering">
   <link rel="canonical" href="https://www.gwambina.co.tz/">
 
   <!-- Favicons -->
@@ -27,7 +27,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Bootstrap 5 + Icons -->
+  <!-- Extra Libraries -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -60,7 +60,77 @@
       font-family: "Poppins", sans-serif;
     }
 
-    /* ========== HERO SWIPER ========== */
+    /* ========== WHITE NAVBAR ========== */
+    .header .branding {
+      background-color: #ffffff !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      padding: 12px 0;
+      transition: all 0.3s ease;
+      border-bottom: none !important;
+    }
+
+    .header.scrolled .branding {
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+      padding: 8px 0;
+    }
+
+    .header .logo img {
+      height: 48px !important;
+      max-height: 48px !important;
+    }
+
+    @media (min-width: 1200px) {
+      .navmenu a,
+      .navmenu a:focus {
+        color: #222222 !important;
+        font-weight: 500;
+        font-size: 15px;
+      }
+
+      .navmenu li:hover > a,
+      .navmenu .active,
+      .navmenu .active:focus {
+        color: #dc3545 !important;
+      }
+
+      .navmenu .dropdown ul {
+        background: #ffffff !important;
+        border: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 8px 0;
+      }
+
+      .navmenu .dropdown ul a {
+        color: #333333 !important;
+      }
+
+      .navmenu .dropdown ul a:hover {
+        color: #dc3545 !important;
+        background-color: #f8f9fa;
+      }
+    }
+
+    .mobile-nav-toggle {
+      color: #222222 !important;
+    }
+
+    @media (max-width: 1199px) {
+      .navmenu ul {
+        background-color: #ffffff !important;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+      }
+      .navmenu a,
+      .navmenu a:focus {
+        color: #222222 !important;
+      }
+      .navmenu a:hover,
+      .navmenu .active {
+        color: #dc3545 !important;
+      }
+    }
+
+    /* ========== HERO ========== */
     .swiper {
       width: 100%;
       height: 85vh;
@@ -76,15 +146,12 @@
       object-fit: cover;
       object-position: center;
     }
-
-    /* Dark overlay for better text readability */
     .overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.65) 100%);
       z-index: 5;
     }
-
     .slider-content {
       position: absolute;
       top: 50%;
@@ -96,7 +163,6 @@
       color: #fff;
       z-index: 10;
     }
-
     .slider-content h1 {
       font-size: clamp(28px, 5vw, 48px);
       font-weight: 700;
@@ -104,23 +170,17 @@
       margin-bottom: 12px;
       text-shadow: 0 2px 8px rgba(0,0,0,0.6);
     }
-
     .slider-content p {
       font-size: clamp(16px, 2.5vw, 20px);
       margin-bottom: 28px;
       opacity: 0.95;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
     }
-
     .hero-stats {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 18px 32px;
       margin-bottom: 32px;
-    }
-    .hero-stat {
-      text-align: center;
     }
     .hero-stat strong {
       display: block;
@@ -132,7 +192,6 @@
       font-size: 0.85rem;
       opacity: 0.9;
     }
-
     .btn-hero {
       background: #dc3545;
       color: #fff;
@@ -142,14 +201,13 @@
       font-weight: 600;
       border-radius: 50px;
       transition: all 0.3s ease;
+      display: inline-block;
     }
     .btn-hero:hover {
       background: #bb2d3b;
       color: #fff;
       transform: translateY(-2px);
     }
-
-    /* Navigation arrows */
     .swiper-button-prev,
     .swiper-button-next {
       color: #fff;
@@ -157,10 +215,6 @@
       width: 48px;
       height: 48px;
       border-radius: 50%;
-    }
-    .swiper-button-prev:hover,
-    .swiper-button-next:hover {
-      background: rgba(220,53,69,0.7);
     }
     .swiper-pagination-bullet {
       background: #fff;
@@ -173,7 +227,6 @@
       border-radius: 10px;
     }
 
-    /* Mobile adjustments */
     @media (max-width: 768px) {
       .swiper {
         height: 75vh;
@@ -187,10 +240,7 @@
       }
     }
 
-    /* ========== GENERAL STYLING ========== */
-    .section-title h2 {
-      font-weight: 700;
-    }
+    /* General */
     .btn-danger {
       border-radius: 50px;
       font-weight: 600;
@@ -232,7 +282,7 @@
     <div class="branding d-flex align-items-center">
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-          <img src="./assets/img/GWAMBINA-LOGO-1-1.png" alt="Gwambina Group logo" height="50">
+          <img src="./assets/img/GWAMBINA-LOGO-1-1.png" alt="Gwambina Group logo" height="48">
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -263,7 +313,7 @@
 
   <main class="main">
 
-    <!-- ========== HERO SWIPER ========== -->
+    <!-- ========== HERO ========== -->
     <div class="swiper mySlider">
       <div class="swiper-wrapper">
 
@@ -355,7 +405,6 @@
         <h2>WHY US</h2>
         <p>Why Choose Our Services</p>
       </div>
-
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
@@ -390,7 +439,6 @@
           <h2>Comprehensive Support Services & Solutions</h2>
           <p>Tailored turnkey solutions engineered to meet strict health, safety, and operational benchmarks across diverse industries.</p>
         </div>
-
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6" data-aos="fade-up">
             <div class="service-item p-4 h-100 shadow rounded bg-white">
@@ -399,7 +447,6 @@
               <p>Balanced international and local meal solutions for high-volume workforces, remote mining camps, oil & gas projects, and corporate institutions. HACCP and ISO 22000 compliant.</p>
             </div>
           </div>
-
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item p-4 h-100 shadow rounded bg-white">
               <i class="bi bi-building text-danger fs-1 mb-3"></i>
@@ -407,7 +454,6 @@
               <p>We manage accommodation, resident reception, maintenance, convenience stores, leisure facilities, and daily operations to create comfortable remote living environments.</p>
             </div>
           </div>
-
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item p-4 h-100 shadow rounded bg-white">
               <i class="bi bi-house-heart-fill text-danger fs-1 mb-3"></i>
@@ -415,7 +461,6 @@
               <p>Professional cleaning and hygiene solutions for offices, industrial facilities, and remote camps using eco-friendly products and standardized sanitation procedures.</p>
             </div>
           </div>
-
           <div class="col-lg-4 col-md-6" data-aos="fade-up">
             <div class="service-item p-4 h-100 shadow rounded bg-white">
               <i class="bi bi-droplet-half text-danger fs-1 mb-3"></i>
@@ -423,7 +468,6 @@
               <p>Industrial laundry, dry cleaning, PPE sanitization, and textile care services designed for mining operations, hospitality, and large workforce accommodation.</p>
             </div>
           </div>
-
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item p-4 h-100 shadow rounded bg-white">
               <i class="bi bi-recycle text-danger fs-1 mb-3"></i>
@@ -431,7 +475,6 @@
               <p>Safe waste collection, segregation, recycling, transportation, and disposal services that help organizations meet environmental regulations and sustainability objectives.</p>
             </div>
           </div>
-
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item p-4 h-100 shadow rounded bg-white">
               <i class="bi bi-gear-wide-connected text-danger fs-1 mb-3"></i>
@@ -450,25 +493,23 @@
           <h2>Commitment to Environmental, Social & Governance (ESG) Excellence</h2>
           <p>Sustainable Growth, Community Empowerment & Safety First</p>
         </div>
-
         <div class="row align-items-center gy-5">
           <div class="col-lg-6" data-aos="fade-right">
             <h3 class="mb-4">Building a Sustainable Future Through Responsible Operations</h3>
-            <p>Gwambina Group LTD is committed to conducting business responsibly, ethically, and sustainably. Our ESG framework guides every aspect of our operations, ensuring we deliver value while protecting the environment, empowering communities, and maintaining the highest standards of corporate governance.</p>
-            <p>From responsible resource management to workplace safety and local economic development, we continuously strive to create lasting positive impacts for our clients, employees, and the communities where we operate.</p>
+            <p>Gwambina Group LTD is committed to conducting business responsibly, ethically, and sustainably. Our ESG framework guides every aspect of our operations.</p>
+            <p>From responsible resource management to workplace safety and local economic development, we continuously strive to create lasting positive impacts.</p>
           </div>
           <div class="col-lg-6 text-center" data-aos="fade-left">
-            <img src="assets/img/GWAMBINA-LOGO-1-1.png" width="320" class="img-fluid rounded-4 shadow-lg" alt="ESG Commitment - Gwambina Group">
+            <img src="assets/img/GWAMBINA-LOGO-1-1.png" width="320" class="img-fluid rounded-4 shadow-lg" alt="ESG Commitment">
           </div>
         </div>
-
         <div class="row gy-4 mt-5">
           <div class="col-lg-4 col-md-6">
             <div class="card border-0 shadow-sm h-100">
               <div class="card-body text-center p-4">
                 <i class="bi bi-tree-fill text-success fs-1 mb-3"></i>
                 <h4>Environmental Stewardship</h4>
-                <p>Eco-friendly waste management, energy-efficient equipment, responsible water usage, and sustainable operational practices.</p>
+                <p>Eco-friendly waste management, energy-efficient equipment and sustainable operational practices.</p>
               </div>
             </div>
           </div>
@@ -477,7 +518,7 @@
               <div class="card-body text-center p-4">
                 <i class="bi bi-people-fill text-warning fs-1 mb-3"></i>
                 <h4>Social Responsibility</h4>
-                <p>We invest in local communities by supporting local suppliers, creating employment, and providing continuous training in health, safety and professional skills.</p>
+                <p>We invest in local communities by supporting local suppliers and providing continuous training.</p>
               </div>
             </div>
           </div>
@@ -486,7 +527,7 @@
               <div class="card-body text-center p-4">
                 <i class="bi bi-shield-check text-primary fs-1 mb-3"></i>
                 <h4>Governance & Safety</h4>
-                <p>Strict OHS standards, internationally recognized food safety practices, ethical business conduct, and transparent governance.</p>
+                <p>Strict OHS standards, food safety practices and transparent governance.</p>
               </div>
             </div>
           </div>
@@ -494,15 +535,14 @@
       </div>
     </section>
 
-    <!-- ========== WHY CHOOSE GWAMBINA ========== -->
+    <!-- ========== WHY CHOOSE ========== -->
     <section class="py-5" id="why-gwambina">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
           <span class="text-danger text-uppercase fw-semibold small">Why Choose Gwambina</span>
           <h2 class="fw-bold mt-2 mb-3">Built on Quality, Safety & Reliable Service</h2>
-          <p class="text-muted mx-auto" style="max-width: 720px;">We deliver dependable catering and integrated facilities management solutions designed to meet the operational needs of organizations across Tanzania.</p>
+          <p class="text-muted mx-auto" style="max-width: 720px;">We deliver dependable catering and integrated facilities management solutions across Tanzania.</p>
         </div>
-
         <div class="row g-4 text-center">
           <div class="col-6 col-md-3" data-aos="fade-up">
             <div class="p-3">
@@ -515,25 +555,24 @@
             <div class="p-3">
               <i class="bi bi-shield-check text-danger fs-1 mb-3"></i>
               <h3 class="h5 fw-bold">Reliability</h3>
-              <p class="small text-muted mb-0">Dependable solutions built around your operational needs.</p>
+              <p class="small text-muted mb-0">Dependable solutions built around your needs.</p>
             </div>
           </div>
           <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
             <div class="p-3">
               <i class="bi bi-patch-check text-danger fs-1 mb-3"></i>
               <h3 class="h5 fw-bold">Safety</h3>
-              <p class="small text-muted mb-0">Strong focus on food safety, HSE and operational standards.</p>
+              <p class="small text-muted mb-0">Strong focus on food safety and HSE standards.</p>
             </div>
           </div>
           <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
             <div class="p-3">
               <i class="bi bi-people text-danger fs-1 mb-3"></i>
               <h3 class="h5 fw-bold">Experienced Team</h3>
-              <p class="small text-muted mb-0">Skilled professionals committed to delivering dependable service.</p>
+              <p class="small text-muted mb-0">Skilled professionals committed to excellence.</p>
             </div>
           </div>
         </div>
-
         <div class="text-center mt-5" data-aos="fade-up">
           <a href="#request-quote" class="btn btn-danger px-5 py-3">Request a Quote</a>
         </div>
@@ -546,9 +585,7 @@
         <div class="text-center mb-5" data-aos="fade-up">
           <span class="text-danger text-uppercase fw-semibold small">Gwambina at a Glance</span>
           <h2 class="fw-bold mt-2">Experience, People & Proven Standards</h2>
-          <p class="text-muted mx-auto mt-3" style="max-width: 720px;">With years of operational experience and a growing professional workforce, Gwambina Group delivers catering and integrated facilities management solutions across Tanzania.</p>
         </div>
-
         <div class="row g-4 text-center">
           <div class="col-6 col-md-3" data-aos="fade-up">
             <div class="p-4 h-100 bg-white rounded shadow-sm">
@@ -580,7 +617,6 @@
           </div>
         </div>
 
-        <!-- Certifications -->
         <div class="text-center mt-5 pt-4" data-aos="fade-up">
           <span class="text-danger text-uppercase fw-semibold small">Certifications & Food Safety</span>
           <h2 class="fw-bold mt-2 mb-4">Committed to Recognized Food Safety Standards</h2>
@@ -589,14 +625,14 @@
               <div class="bg-white rounded shadow-sm p-4 h-100">
                 <i class="bi bi-patch-check-fill text-danger fs-1 mb-3"></i>
                 <h3 class="h5 fw-bold">ISO 22000</h3>
-                <p class="text-muted small mb-0">Food safety management system standard supporting safe and controlled food operations.</p>
+                <p class="text-muted small mb-0">Food safety management system standard.</p>
               </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
               <div class="bg-white rounded shadow-sm p-4 h-100">
                 <i class="bi bi-shield-check text-danger fs-1 mb-3"></i>
                 <h3 class="h5 fw-bold">HACCP</h3>
-                <p class="text-muted small mb-0">A systematic approach to identifying and controlling food safety hazards throughout food operations.</p>
+                <p class="text-muted small mb-0">Systematic approach to controlling food safety hazards.</p>
               </div>
             </div>
           </div>
@@ -614,10 +650,10 @@
         <h2>Enjoy our best moments</h2>
       </div>
       <div class="row g-3">
-        <div class="col-md-3"><img src="assets/img/3Q2A8656-scaled.jpg" class="gallery-img w-100" style="height:250px;object-fit:cover;border-radius:10px;" alt="Gwambina catering"></div>
-        <div class="col-md-3"><img src="assets/img/community.jpeg" class="gallery-img w-100" style="height:250px;object-fit:cover;border-radius:10px;" alt="Gwambina team"></div>
-        <div class="col-md-3"><img src="assets/img/comm2.jpeg" class="gallery-img w-100" style="height:250px;object-fit:cover;border-radius:10px;" alt="Gwambina operations"></div>
-        <div class="col-md-3"><img src="assets/img/gwambina-food-5.jpg" class="gallery-img w-100" style="height:250px;object-fit:cover;border-radius:10px;" alt="Gwambina food"></div>
+        <div class="col-md-3"><img src="assets/img/3Q2A8656-scaled.jpg" class="w-100" style="height:250px;object-fit:cover;border-radius:10px;" alt="Gwambina"></div>
+        <div class="col-md-3"><img src="assets/img/community.jpeg" class="w-100" style="height:250px;object-fit:cover;border-radius:10px;" alt="Gwambina"></div>
+        <div class="col-md-3"><img src="assets/img/comm2.jpeg" class="w-100" style="height:250px;object-fit:cover;border-radius:10px;" alt="Gwambina"></div>
+        <div class="col-md-3"><img src="assets/img/gwambina-food-5.jpg" class="w-100" style="height:250px;object-fit:cover;border-radius:10px;" alt="Gwambina"></div>
       </div>
     </div>
 
@@ -627,8 +663,8 @@
         <div class="row align-items-center">
           <div class="col-lg-7" data-aos="fade-right">
             <h2 class="fw-bold mb-4">Ready to Elevate Your Operational & Facility Management Standards?</h2>
-            <p class="lead mb-4">Partner with Gwambina Group for reliable, professional and integrated support services across Tanzania. Our experienced team delivers solutions tailored for corporate offices, industrial operations, hospitality venues, mining camps, and remote project sites.</p>
-            <p class="mb-4">Whether you require catering, facilities management, housekeeping, laundry, waste management, or complete camp management services, Gwambina Group LTD is committed to delivering reliable, efficient, and sustainable solutions.</p>
+            <p class="lead mb-4">Partner with Gwambina Group for reliable, professional and integrated support services across Tanzania.</p>
+            <p class="mb-4">Whether you require catering, facilities management, housekeeping, laundry, waste management, or complete camp management services — we are ready to help.</p>
           </div>
           <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
             <div class="card border-0 shadow-lg">
@@ -655,13 +691,6 @@
                     <p class="mb-0"><a href="mailto:info@gwambina.co.tz">info@gwambina.co.tz</a></p>
                   </div>
                 </div>
-                <div class="d-flex">
-                  <i class="bi bi-globe2 text-danger fs-3 me-3"></i>
-                  <div>
-                    <h5 class="mb-1">Website</h5>
-                    <p class="mb-0"><a href="https://www.gwambina.co.tz" target="_blank">www.gwambina.co.tz</a></p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -684,12 +713,11 @@
           <div class="col-xl-10 col-lg-11">
             <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
               <div class="row g-0">
-                <!-- Left side -->
                 <div class="col-lg-4 p-4 p-lg-5 text-white" style="background:#111;">
                   <div class="h-100 d-flex flex-column">
                     <div>
                       <h3 class="fw-bold mb-3">Let's Work Together</h3>
-                      <p class="text-white-50">Whether you need catering, facilities management, housekeeping, laundry, waste management or camp solutions, Gwambina Group is ready to help.</p>
+                      <p class="text-white-50">Whether you need catering, facilities management, housekeeping, laundry, waste management or camp solutions — we are ready.</p>
                     </div>
                     <div class="mt-4">
                       <div class="d-flex mb-4">
@@ -714,13 +742,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="mt-auto pt-5">
-                      <small class="text-white-50">We provide tailored solutions for businesses, projects, events and remote operations.</small>
-                    </div>
                   </div>
                 </div>
 
-                <!-- Form -->
                 <div class="col-lg-8 p-4 p-lg-5 bg-white">
                   <form action="https://formspree.io/f/mqpkzljz" method="POST">
                     <div class="row g-4">
@@ -760,24 +784,16 @@
                         <label class="form-label fw-semibold">Project / Event Location</label>
                         <input type="text" name="location" class="form-control form-control-lg" placeholder="e.g. Dar es Salaam">
                       </div>
-                      <div class="col-md-6">
-                        <label class="form-label fw-semibold">Expected Start / Event Date</label>
-                        <input type="date" name="date" class="form-control form-control-lg">
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label fw-semibold">Number of People / Employees</label>
-                        <input type="number" name="people" class="form-control form-control-lg" placeholder="e.g. 150" min="1">
-                      </div>
                       <div class="col-12">
                         <label class="form-label fw-semibold">Tell Us About Your Requirements <span class="text-danger">*</span></label>
-                        <textarea name="message" class="form-control" rows="5" placeholder="Please describe your requirements, project scope, event details or any other information..." required></textarea>
+                        <textarea name="message" class="form-control" rows="5" placeholder="Please describe your requirements..." required></textarea>
                       </div>
                       <input type="hidden" name="_subject" value="New Quote Request - Gwambina Website">
                       <div class="col-12">
                         <button type="submit" class="btn btn-lg px-5 py-3 rounded-pill text-white fw-semibold" style="background:#b88a2b;border:none;">
                           Request a Quote <i class="bi bi-arrow-right ms-2"></i>
                         </button>
-                        <p class="small text-muted mt-3 mb-0">By submitting this form, you agree to be contacted by the Gwambina Group team regarding your enquiry.</p>
+                        <p class="small text-muted mt-3 mb-0">By submitting this form, you agree to be contacted by the Gwambina Group team.</p>
                       </div>
                     </div>
                   </form>
@@ -847,7 +863,7 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
-  <!-- Vendor JS -->
+  <!-- Scripts -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -858,6 +874,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
+    // Swiper
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       loop: true,
@@ -874,10 +891,18 @@
         prevEl: '.swiper-button-prev',
       },
       effect: 'fade',
-      fadeEffect: {
-        crossFade: true,
-      },
+      fadeEffect: { crossFade: true },
       speed: 1200,
+    });
+
+    // Sticky header shadow
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
     });
   </script>
 
