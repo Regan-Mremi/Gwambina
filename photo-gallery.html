@@ -3,357 +3,1017 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>photo-gallery</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-<link rel="canonical" href="https://www.gwambina.co.tz/photo-gallery.html">
-  <!-- Favicons -->
-  <link href="assets/img/GWAMBINA-LOGO-1-1.png" rel="icon">
-  <link href="assets/img/GWAMBINA-LOGO-1-1.png" rel="apple-touch-icon">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Gwambina Group Project & Service Gallery | Tanzania</title>
+
+  <meta
+    name="description"
+    content="Explore Gwambina Group's project and service gallery featuring catering, facilities management, hospitality, remote-site and support services across Tanzania.">
+
+  <meta
+    name="robots"
+    content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://www.gwambina.co.tz/photo-gallery.html">
+
+  <!-- Favicon -->
+  <link
+    href="assets/img/GWAMBINA-LOGO-1-1.png"
+    rel="icon">
+
+  <link
+    href="assets/img/GWAMBINA-LOGO-1-1.png"
+    rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com"
+    rel="preconnect">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.gstatic.com"
+    rel="preconnect"
+    crossorigin>
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-  
+  <!-- Vendor CSS -->
+  <link
+    href="assets/vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <link
+    href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet">
+
+  <link
+    href="assets/vendor/aos/aos.css"
+    rel="stylesheet">
+
+  <link
+    href="assets/vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet">
+
+  <link
+    href="assets/vendor/swiper/swiper-bundle.min.css"
+    rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link
+    href="assets/css/main.css"
+    rel="stylesheet">
+
+
+  <!-- =====================================================
+       GWAMBINA GALLERY - UNIFORM IMAGE SIZE
+       ===================================================== -->
+
+  <style>
+
+    /*
+     * Every gallery card has exactly the same
+     * 3:2 horizontal proportion.
+     */
+
+    #gallery .gallery-item {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+      position: relative;
+      background: #f5f5f5;
+    }
+
+
+    /*
+     * Every image fills exactly the same box.
+     * object-fit: cover prevents stretching.
+     */
+
+    #gallery .gallery-item img {
+      width: 100% !important;
+      height: 100% !important;
+      display: block;
+      object-fit: cover !important;
+      object-position: center center;
+      transition: transform 0.4s ease;
+    }
+
+
+    /*
+     * Small hover effect.
+     */
+
+    #gallery .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+
+    /*
+     * Remove unwanted spacing.
+     */
+
+    #gallery .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+
+    /*
+     * Make gallery responsive on phones.
+     */
+
+    @media (max-width: 575.98px) {
+
+      #gallery .gallery-item {
+        aspect-ratio: 3 / 2;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body class="starter-page-page">
 
- <header id="header" class="header fixed-top">
 
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header id="header" class="header fixed-top">
+
+    <!-- Top Bar -->
     <div class="topbar d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a style="color: white;"  href="mailto:contact@example.com">
-info@gwambina.co.tz
-</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span style="color: white;">+255 743 484 755</span></i>
-        </div>
-        <div class="languages d-none d-md-flex align-items-center">
-          <ul>
-            <li>En</li>
-            <li><a href="#">De</a></li>
-          </ul>
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
 
-    <div class="branding d-flex align-items-cente">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+
+        <div class="contact-info d-flex align-items-center">
+
+          <i class="bi bi-envelope d-flex align-items-center">
+
+            <a
+              style="color: white;"
+              href="mailto:info@gwambina.co.tz">
+
+              info@gwambina.co.tz
+
+            </a>
+
+          </i>
+
+
+          <i class="bi bi-phone d-flex align-items-center ms-4">
+
+            <a
+              style="color: white;"
+              href="tel:+255743484755">
+
+              +255 743 484 755
+
+            </a>
+
+          </i>
+
+        </div>
+
+
+        <div class="languages d-none d-md-flex align-items-center">
+
+          <ul>
+
+            <li>En</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- End Top Bar -->
+
+
+    <!-- Branding -->
+    <div class="branding d-flex align-items-center">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-         <img src="./assets/img/GWAMBINA-LOGO-1-1.png" alt="Gwambina Logo" height="50px">
+
+
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0">
+
+          <img
+            src="assets/img/GWAMBINA-LOGO-1-1.png"
+            alt="Gwambina Group Limited logo"
+            width="180"
+            height="50">
+
         </a>
 
+
+        <!-- Navigation -->
         <nav id="navmenu" class="navmenu">
+
           <ul>
-            <li><a href="index.html" class="active">Home<br></a></li>
-            <li><a href="photo-gallery.html">Photo Gallery</a></li>
-            <li><a href="patner.html">ESG</a></li>
-            <li><a href="amell.html">Amell in Dar</a></li>
-           
-            <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+            <li>
+              <a href="index.html">
+                Home
+              </a>
+            </li>
+
+
+            <li>
+              <a
+                href="photo-gallery.html"
+                class="active">
+
+                Photo Gallery
+
+              </a>
+            </li>
+
+
+            <li>
+              <a href="patner.html">
+                ESG
+              </a>
+            </li>
+
+
+            <li>
+              <a href="amell.html">
+                Amell in Dar
+              </a>
+            </li>
+
+
+            <!-- Services -->
+            <li class="dropdown">
+
+              <a href="#">
+
+                <span>Services</span>
+
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+
+              </a>
+
+
               <ul>
-                <li><a href="catering.html">Catering Services</a></li>
-              
-                <li><a href="Bar & Restaurant.html">Bar & Restaurant</a></li>
-                <li><a href="running.html">Running Convenience Stores</a></li>
-                <li><a href="waste.html">Waste Management Services</a></li>
-                  <li><a href="laundry.html">Laundry Services</a></li>
-                    <li><a href="housekeeping.html">HouseKeeping Services</a></li>
-                      <li><a href="gym.html">Gym Services</a></li>
-                        <li><a href="events.html">Events</a></li>
+
+                <li>
+                  <a href="catering.html">
+                    Catering Services
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="Bar & Restaurant.html">
+                    Bar & Restaurant
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="running.html">
+                    Running Convenience Stores
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="waste.html">
+                    Waste Management Services
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="laundry.html">
+                    Laundry Services
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="housekeeping.html">
+                    Housekeeping Services
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="gym.html">
+                    Gym Services
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="events.html">
+                    Events
+                  </a>
+                </li>
+
               </ul>
+
             </li>
 
           </ul>
+
+
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
         </nav>
 
-      
       </div>
 
     </div>
 
   </header>
+  <!-- End Header -->
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
 
   <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title position-relative" data-aos="fade" style="background-image: url(assets/img/amell.jpg);">
-      <div class="container position-relative">
-         
-      </div>
-    </div><!-- End Page Title -->
 
- <section id="gallery" class="gallery section">
+    <!-- Page Title -->
+    <div
+      class="page-title position-relative"
+      data-aos="fade"
+      style="background-image: url(assets/img/amell.jpg);">
+
+      <div class="container position-relative">
+      </div>
+
+    </div>
+    <!-- End Page Title -->
+
+
+    <!-- =====================================================
+         PHOTO GALLERY
+         ===================================================== -->
+
+    <section
+      id="gallery"
+      class="gallery section">
+
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h1>Gwambina Group Project & Service Gallery</h1>
-        <p>Enjoy the best moments</p>
-      </div><!-- End Section Title -->
+      <div
+        class="container section-title"
+        data-aos="fade-up">
 
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+        <h1>
+          Gwambina Group Project &amp; Service Gallery
+        </h1>
+
+        <p>
+          Explore selected moments from Gwambina Group's
+          catering, hospitality, facilities management and
+          service operations across Tanzania.
+        </p>
+
+      </div>
+      <!-- End Section Title -->
+
+
+      <!-- Gallery -->
+      <div
+        class="container-fluid"
+        data-aos="fade-up"
+        data-aos-delay="100">
+
 
         <div class="row g-0">
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="./assets/img/3Q2A8207-scaled-1.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="./assets/img/amell.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="./assets/img/community.jpeg" class="glightbox" data-gallery="images-gallery">
-                <img src="./assets/img/community.jpeg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
+          <!-- =================================================
+               IMAGE 1
+               ================================================= -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="./assets/img/award-14-scaled.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="./assets/img/award-14-scaled.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
+          <div class="col-lg-3 col-md-4 col-6">
 
-          <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="./assets/img/cater.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/cater.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
 
-         
-  <div class="col-lg-4 col-md-6">
-            <div class="gallery-item">
-              <a href="./assets/img/pori1.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/pori1.jpg" alt="Gwambina Group catering and event service" class="img-fluid" width="1200"
-            height="800"
-            loading="lazy">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
+              <a
+                href="assets/img/amell.jpg"
+                class="glightbox"
+                data-gallery="images-gallery">
 
-<div class="col-lg-4 col-md-6">
-            <div class="gallery-item">
-              <a href="./assets/img/pori2.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/pori2.jpg" alt="Gwambina Group catering and event service" class="img-fluid" width="1200"
-            height="800"
-            loading="lazy">
-              </a>
-            </div>
-          </div> 
+                <img
+                  src="assets/img/amell.jpg"
+                  alt="Amell in Dar hospitality and event venue"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="eager">
 
-
-<div class="col-lg-4 col-md-6">
-            <div class="gallery-item">
-              <a href="./assets/img/pori3.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/pori3.jpg" alt="Gwambina Group catering and event service" class="img-fluid" width="1200"
-            height="800"
-            loading="lazy">
               </a>
+
             </div>
+
           </div>
+          <!-- End Gallery Item -->
 
 
-<div class="col-lg-4 col-md-6">
+          <!-- =================================================
+               IMAGE 2
+               ================================================= -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+
             <div class="gallery-item">
-              <a href="./assets/img/pori4.jpg" class="glightbox" data-gallery="images-gallery" >
-                <img src="assets/img/pori4.jpg" alt="Gwambina Group catering and event service" class="img-fluid" width="1200"
-            height="800"
-            loading="lazy">
+
+              <a
+                href="assets/img/community.jpeg"
+                class="glightbox"
+                data-gallery="images-gallery">
+
+                <img
+                  src="assets/img/community.jpeg"
+                  alt="Gwambina Group community and service activities in Tanzania"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy">
+
               </a>
+
             </div>
+
           </div>
+          <!-- End Gallery Item -->
 
 
-<div class="col-lg-3 col-md-4">
+          <!-- =================================================
+               IMAGE 3
+               ================================================= -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+
             <div class="gallery-item">
-              <a href="./assets/img/pori5.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/pori5.jpg" alt="Gwambina Group catering and event service" class="img-fluid">
-              </a>
-            </div>
-          </div>
 
-<div class="col-lg-3 col-md-4">
+              <a
+                href="assets/img/award-14-scaled.jpg"
+                class="glightbox"
+                data-gallery="images-gallery">
+
+                <img
+                  src="assets/img/award-14-scaled.jpg"
+                  alt="Gwambina Group award and professional achievement"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy">
+
+              </a>
+
+            </div>
+
+          </div>
+          <!-- End Gallery Item -->
+
+
+          <!-- =================================================
+               IMAGE 4
+               ================================================= -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+
             <div class="gallery-item">
-              <a href="./assets/img/pori6.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/pori6.jpg" alt="Gwambina Group catering and event service" class="img-fluid">
-              </a>
-            </div>
-          </div>
 
-<div class="col-lg-3 col-md-4">
+              <a
+                href="assets/img/cater.jpg"
+                class="glightbox"
+                data-gallery="images-gallery">
+
+                <img
+                  src="assets/img/cater.jpg"
+                  alt="Gwambina Group professional catering service in Tanzania"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy">
+
+              </a>
+
+            </div>
+
+          </div>
+          <!-- End Gallery Item -->
+
+
+          <!-- =================================================
+               IMAGE 5 - PORI 1
+               ================================================= -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+
             <div class="gallery-item">
-              <a href="./assets/img/pori7.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/pori7.jpg" alt="Gwambina Group catering and event service" class="img-fluid">
+
+              <a
+                href="assets/img/pori1.jpg"
+                class="glightbox"
+                data-gallery="images-gallery">
+
+                <img
+                  src="assets/img/pori1.jpg"
+                  alt="Gwambina Group catering and event service"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy">
+
               </a>
+
             </div>
+
           </div>
+          <!-- End Gallery Item -->
 
 
-<div class="col-lg-3 col-md-4">
+          <!-- =================================================
+               IMAGE 6 - PORI 2
+               ================================================= -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+
             <div class="gallery-item">
-              <a href="./assets/img/pori8.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/pori8.jpg" alt="Gwambina Group catering and event service" class="img-fluid">
+
+              <a
+                href="assets/img/pori2.jpg"
+                class="glightbox"
+                data-gallery="images-gallery">
+
+                <img
+                  src="assets/img/pori2.jpg"
+                  alt="Gwambina Group catering and hospitality service"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy">
+
               </a>
+
             </div>
+
           </div>
+          <!-- End Gallery Item -->
+
+
+          <!-- =================================================
+               IMAGE 7 - PORI 3
+               ================================================= -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="gallery-item">
+
+              <a
+                href="assets/img/pori3.jpg"
+                class="glightbox"
+                data-gallery="images-gallery">
+
+                <img
+                  src="assets/img/pori3.jpg"
+                  alt="Gwambina Group catering operations in Tanzania"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy">
+
+              </a>
+
+            </div>
+
+          </div>
+          <!-- End Gallery Item -->
+
+
+          <!-- =================================================
+               IMAGE 8 - PORI 4
+               ================================================= -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="gallery-item">
+
+              <a
+                href="assets/img/pori4.jpg"
+                class="glightbox"
+                data-gallery="images-gallery">
+
+                <img
+                  src="assets/img/pori4.jpg"
+                  alt="Gwambina Group professional service operations"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy">
+
+              </a>
+
+            </div>
+
+          </div>
+          <!-- End Gallery Item -->
+
+
+          <!-- =================================================
+               IMAGE 9 - PORI 5
+               ================================================= -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="gallery-item">
+
+              <a
+                href="assets/img/pori5.jpg"
+                class="glightbox"
+                data-gallery="images-gallery">
+
+                <img
+                  src="assets/img/pori5.jpg"
+                  alt="Gwambina Group service and project activities"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy">
+
+              </a>
+
+            </div>
+
+          </div>
+          <!-- End Gallery Item -->
+
+
+          <!-- =================================================
+               IMAGE 10 - PORI 6
+               ================================================= -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="gallery-item">
+
+              <a
+                href="assets/img/pori6.jpg"
+                class="glightbox"
+                data-gallery="images-gallery">
+
+                <img
+                  src="assets/img/pori6.jpg"
+                  alt="Gwambina Group catering and service operations"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy">
+
+              </a>
+
+            </div>
+
+          </div>
+          <!-- End Gallery Item -->
+
+
+          <!-- =================================================
+               IMAGE 11 - PORI 7
+               ================================================= -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="gallery-item">
+
+              <a
+                href="assets/img/pori7.jpg"
+                class="glightbox"
+                data-gallery="images-gallery">
+
+                <img
+                  src="assets/img/pori7.jpg"
+                  alt="Gwambina Group hospitality and catering operations"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy">
+
+              </a>
+
+            </div>
+
+          </div>
+          <!-- End Gallery Item -->
+
+
+          <!-- =================================================
+               IMAGE 12 - PORI 8
+               ================================================= -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="gallery-item">
+
+              <a
+                href="assets/img/pori8.jpg"
+                class="glightbox"
+                data-gallery="images-gallery">
+
+                <img
+                  src="assets/img/pori8.jpg"
+                  alt="Gwambina Group project and service activities"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy">
+
+              </a>
+
+            </div>
+
+          </div>
+          <!-- End Gallery Item -->
+
 
         </div>
 
       </div>
 
-    </section><!-- /Gallery Section -->
+    </section>
+    <!-- End Gallery Section -->
 
 
+  </main>
 
- <footer id="footer" class="footer">
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer id="footer" class="footer">
+
 
     <div class="container footer-top">
+
       <div class="row gy-4">
+
+
+        <!-- Company -->
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Gwambina Group Limited</span>
+
+          <a
+            href="index.html"
+            class="logo d-flex align-items-center">
+
+            <span class="sitename">
+              Gwambina Group Limited
+            </span>
+
           </a>
+
+
           <div class="footer-contact pt-3">
+
             <p>Location</p>
-            <p>PSSSF Commercial Complex Floor No:3,Sam Nujoma</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+255 743 484 755</span></p>
-            <p><strong>Email:</strong> <span>info@gwambina.co.tz</span></p>
+
+            <p>
+              3rd Floor, PSSSF Commercial Complex,
+              Sam Nujoma Road, Dar es Salaam, Tanzania
+            </p>
+
+
+            <p class="mt-3">
+
+              <strong>Phone:</strong>
+
+              <a href="tel:+255743484755">
+                +255 743 484 755
+              </a>
+
+            </p>
+
+
+            <p>
+
+              <strong>Email:</strong>
+
+              <a href="mailto:info@gwambina.co.tz">
+                info@gwambina.co.tz
+              </a>
+
+            </p>
+
           </div>
-         <div class="social-links d-flex gap-3">
-    <a href="" target="_blank">
-        <i class="bi bi-facebook"></i>
-    </a>
 
-    <a href="" target="_blank">
-        <i class="bi bi-instagram"></i>
-    </a>
 
-    <a href="" target="_blank">
-        <i class="bi bi-tiktok"></i>
-    </a>
+          <!-- Social Links -->
+          <div class="social-links d-flex gap-3">
 
-    <a href="" target="_blank">
-        <i class="bi bi-youtube"></i>
-    </a>
-</div>
+
+            <a
+              href="https://www.facebook.com/p/Gwambina-Group-Limited-61578500457951/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Gwambina Group on Facebook">
+
+              <i class="bi bi-facebook"></i>
+
+            </a>
+
+
+            <a
+              href="https://www.instagram.com/gwambina_catering/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Gwambina Group on Instagram">
+
+              <i class="bi bi-instagram"></i>
+
+            </a>
+
+
+            <a
+              href="#"
+              aria-label="Gwambina Group on TikTok">
+
+              <i class="bi bi-tiktok"></i>
+
+            </a>
+
+
+            <a
+              href="#"
+              aria-label="Gwambina Group on YouTube">
+
+              <i class="bi bi-youtube"></i>
+
+            </a>
+
+          </div>
+
         </div>
 
-        
 
+        <!-- Services -->
         <div class="col-lg-2 col-md-3 footer-links">
+
           <h4>Our Services</h4>
+
           <ul>
-            <li><a href="catering.html">Catering Services</a></li>
-            <li><a href="Bar & Restaurant.html">Bar & Restaurant</a></li>
-            <li><a href="running.html">Running Convenience Stores</a></li>
-            <li><a href="waste.html">Waste Management Services</a></li>
-            <li><a href="laundry.html">Laundry Services</a></li>
-              <li><a href="housekeeping.html">HouseKeeping Services</a></li>
-                      <li><a href="gym.html">Gym Services</a></li>
-                        <li><a href="events.html">Events</a></li>
+
+            <li>
+              <a href="catering.html">
+                Catering Services
+              </a>
+            </li>
+
+            <li>
+              <a href="Bar & Restaurant.html">
+                Bar &amp; Restaurant
+              </a>
+            </li>
+
+            <li>
+              <a href="running.html">
+                Running Convenience Stores
+              </a>
+            </li>
+
+            <li>
+              <a href="waste.html">
+                Waste Management Services
+              </a>
+            </li>
+
+            <li>
+              <a href="laundry.html">
+                Laundry Services
+              </a>
+            </li>
+
+            <li>
+              <a href="housekeeping.html">
+                Housekeeping Services
+              </a>
+            </li>
+
+            <li>
+              <a href="gym.html">
+                Gym Services
+              </a>
+            </li>
+
+            <li>
+              <a href="events.html">
+                Events
+              </a>
+            </li>
+
           </ul>
+
         </div>
 
 
-        
-       <div class="col-lg-2 col-md-3 footer-links">
-  <h4>Stay Updated</h4>
-  <ul>
-    <li><a href="">Upcoming Events</a></li>
-    <li><a href="">Career</a></li>
-  </ul>
-</div>
-         
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-md-3 footer-links">
+
+          <h4>Stay Updated</h4>
+
+          <ul>
+
+            <li>
+              <a href="events.html">
+                Upcoming Events
+              </a>
+            </li>
+
+            <li>
+              <a href="apply.html">
+                Career
+              </a>
+            </li>
+
+            <li>
+              <a href="patner.html">
+                ESG
+              </a>
+            </li>
+
+            <li>
+              <a href="photo-gallery.html">
+                Photo Gallery
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
 
       </div>
+
     </div>
 
-    
+
   </footer>
+  <!-- End Footer -->
+
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a
+    href="#"
+    id="scroll-top"
+    class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Scroll to top">
+
+    <i class="bi bi-arrow-up-short"></i>
+
+  </a>
+
 
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
   <script src="assets/vendor/php-email-form/validate.js"></script>
+
   <script src="assets/vendor/aos/aos.js"></script>
+
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-
-  <script>
-const counters = document.querySelectorAll('.counter');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const counter = entry.target;
-            const target = parseFloat(counter.getAttribute('data-target'));
-            const decimals = target.toString().includes('.') ? 1 : 0;
-            let current = 0;
-            const increment = target / 100;
-
-            const updateCounter = () => {
-                current += increment;
-
-                if (current < target) {
-                    counter.innerText = current.toFixed(decimals);
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    if (target >= 1000) {
-                        counter.innerText = (target / 1000) + "k+";
-                    } else if (target === 500) {
-                        counter.innerText = "500+";
-                    } else if (target === 100) {
-                        counter.innerText = "100%";
-                    } else {
-                        counter.innerText = target.toFixed(decimals);
-                    }
-                }
-            };
-
-            updateCounter();
-            observer.unobserve(counter);
-        }
-    });
-}, { threshold: 0.5 });
-
-counters.forEach(counter => observer.observe(counter));
-</script>
 
 
 </body>
