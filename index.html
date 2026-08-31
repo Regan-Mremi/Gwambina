@@ -158,8 +158,8 @@
       top: 57% !important;
       left: 50%;
       transform: translate(-50%, -42%) !important;
-      width: 90%;
-      max-width: 900px;
+      width: 92%;
+      max-width: 980px;
       text-align: center;
       color: #fff;
       z-index: 10;
@@ -167,40 +167,43 @@
     }
 
     .slider-content h1 {
-      font-size: clamp(28px, 5vw, 48px);
+      font-size: clamp(26px, 4.8vw, 46px);
       font-weight: 700;
       line-height: 1.25;
       margin-bottom: 12px;
       text-shadow: 0 2px 8px rgba(0,0,0,0.6);
     }
     .slider-content p {
-      font-size: clamp(16px, 2.5vw, 20px);
-      margin-bottom: 28px;
+      font-size: clamp(15px, 2.3vw, 19px);
+      margin-bottom: 24px;
       opacity: 0.95;
     }
+
+    /* Hero Stats - Updated for 7 items */
     .hero-stats {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 18px 32px;
-      margin-bottom: 32px;
+      gap: 12px 22px;
+      margin-bottom: 28px;
     }
     .hero-stat strong {
       display: block;
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: #ffc107;
     }
     .hero-stat span {
-      font-size: 0.85rem;
+      font-size: 0.75rem;
       opacity: 0.9;
     }
+
     .btn-hero {
       background: #dc3545;
       color: #fff;
       border: none;
-      padding: 14px 36px;
-      font-size: 1.1rem;
+      padding: 13px 34px;
+      font-size: 1.05rem;
       font-weight: 600;
       border-radius: 50px;
       transition: all 0.3s ease;
@@ -211,6 +214,7 @@
       color: #fff;
       transform: translateY(-2px);
     }
+
     .swiper-button-prev,
     .swiper-button-next {
       color: #fff;
@@ -232,19 +236,22 @@
 
     @media (max-width: 768px) {
       .swiper {
-        height: 75vh;
-        min-height: 480px;
+        height: 78vh;
+        min-height: 500px;
       }
       .slider-content {
-        top: 60% !important;
-        transform: translate(-50%, -38%) !important;
-        width: 92% !important;
+        top: 58% !important;
+        transform: translate(-50%, -40%) !important;
+        width: 94% !important;
       }
       .hero-stats {
-        gap: 12px 20px;
+        gap: 10px 14px;
       }
       .hero-stat strong {
-        font-size: 1.3rem;
+        font-size: 1.05rem;
+      }
+      .hero-stat span {
+        font-size: 0.7rem;
       }
     }
 
@@ -346,8 +353,20 @@
                 <span>Projects</span>
               </div>
               <div class="hero-stat">
-                <strong>4 ISO</strong>
-                <span>Certified</span>
+                <strong>ISO 22000</strong>
+                <span>Food Safety</span>
+              </div>
+              <div class="hero-stat">
+                <strong>ISO 9001</strong>
+                <span>Quality</span>
+              </div>
+              <div class="hero-stat">
+                <strong>ISO 14001</strong>
+                <span>Environment</span>
+              </div>
+              <div class="hero-stat">
+                <strong>ISO 45001</strong>
+                <span>Health & Safety</span>
               </div>
             </div>
 
@@ -624,61 +643,40 @@
           </div>
         </div>
 
-        <!-- Updated Certifications Section -->
+        <!-- Certifications -->
         <div class="text-center mt-5 pt-4" data-aos="fade-up">
-          <span class="text-danger text-uppercase fw-semibold small">
-            Certifications & Standards
-          </span>
-          <h2 class="fw-bold mt-2 mb-4">
-            Committed to International Standards
-          </h2>
+          <span class="text-danger text-uppercase fw-semibold small">Certifications & Standards</span>
+          <h2 class="fw-bold mt-2 mb-4">Committed to International Standards</h2>
 
           <div class="row justify-content-center g-4">
-
-            <!-- ISO 22000 -->
             <div class="col-6 col-md-3">
               <div class="bg-white rounded shadow-sm p-4 h-100">
                 <i class="bi bi-patch-check-fill text-danger fs-1 mb-3"></i>
                 <h3 class="h5 fw-bold">ISO 22000</h3>
-                <p class="text-muted small mb-0">
-                  Food Safety Management System
-                </p>
+                <p class="text-muted small mb-0">Food Safety Management System</p>
               </div>
             </div>
-
-            <!-- ISO 9001 -->
             <div class="col-6 col-md-3">
               <div class="bg-white rounded shadow-sm p-4 h-100">
                 <i class="bi bi-award-fill text-danger fs-1 mb-3"></i>
                 <h3 class="h5 fw-bold">ISO 9001</h3>
-                <p class="text-muted small mb-0">
-                  Quality Management System
-                </p>
+                <p class="text-muted small mb-0">Quality Management System</p>
               </div>
             </div>
-
-            <!-- ISO 14001 -->
             <div class="col-6 col-md-3">
               <div class="bg-white rounded shadow-sm p-4 h-100">
                 <i class="bi bi-tree-fill text-success fs-1 mb-3"></i>
                 <h3 class="h5 fw-bold">ISO 14001</h3>
-                <p class="text-muted small mb-0">
-                  Environmental Management System
-                </p>
+                <p class="text-muted small mb-0">Environmental Management System</p>
               </div>
             </div>
-
-            <!-- ISO 45001 -->
             <div class="col-6 col-md-3">
               <div class="bg-white rounded shadow-sm p-4 h-100">
                 <i class="bi bi-shield-check text-primary fs-1 mb-3"></i>
                 <h3 class="h5 fw-bold">ISO 45001</h3>
-                <p class="text-muted small mb-0">
-                  Occupational Health & Safety
-                </p>
+                <p class="text-muted small mb-0">Occupational Health & Safety</p>
               </div>
             </div>
-
           </div>
         </div>
 
