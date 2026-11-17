@@ -2082,3 +2082,47 @@ a:visited {
     color: #dc3545 !important;
   }
 }
+
+
+
+
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+  }
+
+  .whatsapp-float img {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Mobile adjustment */
+  @media screen and (max-width: 768px) {
+    .whatsapp-float {
+      width: 55px;
+      height: 55px;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
